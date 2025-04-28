@@ -25,7 +25,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
     }
 
     @Override
-    public Restaurant selectRestaurant(long id) throws Exception {
+    public Restaurant selectRestaurant(Long id) throws Exception {
         Optional<Restaurant> restaurant = restaurantRepository.findById(id);
 
         if (restaurant.isPresent()) {
@@ -37,7 +37,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
     }
 
     @Override
-    public Restaurant updateRestaurant(long id, String name) throws Exception {
+    public Restaurant updateRestaurant(Long id, String name) throws Exception {
         Optional<Restaurant> findRestaurant = restaurantRepository.findById(id);
 
         if (findRestaurant.isPresent()) {
@@ -50,7 +50,7 @@ public class RestaurantDAOImpl implements RestaurantDAO {
     }
 
     @Override
-    public void deleteRestaurant(long id) throws Exception {
+    public void deleteRestaurant(Long id) throws Exception {
         Optional<Restaurant> findRestaurant = restaurantRepository.findById(id);
 
         if (findRestaurant.isPresent()) {

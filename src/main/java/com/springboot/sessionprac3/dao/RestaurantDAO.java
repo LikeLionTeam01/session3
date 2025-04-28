@@ -6,9 +6,9 @@ public interface RestaurantDAO {
 
     Restaurant insertRestaurant(Restaurant restaurant);
 
-    Restaurant selectRestaurant(long id) throws Exception;
+    Restaurant selectRestaurant(Long id) throws Exception;
 
     Restaurant updateRestaurant(Long id, String name) throws Exception;
 
-    void deleteRestaurant(long id) throws Exception;
+    void deleteRestaurant(Long id) throws Exception;
 }
