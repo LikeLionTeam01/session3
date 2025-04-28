@@ -12,4 +12,7 @@ public interface RestaurantService {
     ResponseDto saveRestaurant(RequestDto requestDto);
 
     ResponseDto changeRestaurantName(ChangeNameRequestDto changeNameRequestDto) throws Exception;
+
+    void deleteRestaurant(Long id) throws Exception;
+
 }

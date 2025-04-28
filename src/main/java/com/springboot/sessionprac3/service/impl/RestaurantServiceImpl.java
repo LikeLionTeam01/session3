@@ -9,6 +9,7 @@ import com.springboot.sessionprac3.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Service
 public class RestaurantServiceImpl implements RestaurantService {
 
     private final RestaurantDAO restaurantDAO;
@@ -71,5 +72,10 @@ public class RestaurantServiceImpl implements RestaurantService {
         responseDto.setMenu(updatedRestaurant.getMenu());
 
         return responseDto;
+    }
+
+    @Override
+    public void deleteRestaurant(Long id) throws Exception {
+        restaurantDAO.deleteRestaurant(id);
     }
 }
