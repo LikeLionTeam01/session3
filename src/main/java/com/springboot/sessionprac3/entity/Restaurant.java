@@ -20,7 +20,7 @@ public class Restaurant {
 
     private String address;
 
-    private String phoneNumber;
+    private String number;
 
     private String menu;
 
